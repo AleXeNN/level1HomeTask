@@ -1,26 +1,20 @@
-//public class level1HomeTask1 {
-// почему я не могу весь урок завернуть в метод?
-    public class Main {
+    public class Level1HomeTask1 {
         public static void main(String[] args) {
             System.out.println("Привет проверяющий!");
 
             //3. Написать метод вычисляющий выражение a * (b + (c / d)) и возвращающий результат,где a, b, c, d – входные параметры этого метода;
-            findExpNumber();
-            int s = findExpNumber();
-            System.out.println("Результат выражения " +s);
+            System.out.println("Результат выражения " +findExpNumber());
 
             //4. Написать метод, принимающий на вход два числа, и проверяющий что их сумма лежит в пределах от 10 до 20(включительно),
             //   если да – вернуть true, в противном случае – false;
-            sumIntoLimit();
-            boolean sumILs = sumIntoLimit();
+            boolean sumILs = sumIntoLimit(6, 5);
+//            ❗️- лишнее убрать
             System.out.println("Сумма чисел a1 и a2 лежит в пределах м/у 10 и 20 соответсвует " + sumILs);
 
 
             //5. Написать метод, которому в качестве параметра передается целое число, метод должен напечатать в консоль положительное ли
             //   число передали, или отрицательное; Замечание: ноль считаем положительным числом.
-            intPositiveOrNegative();
-            boolean ipon = intPositiveOrNegative();
-            System.out.println("Значение a3 являетеся положительным " + intPositiveOrNegative());
+            printPositiveOrNegative(-4);
 
         }
 
@@ -30,28 +24,26 @@
             boolean aBoolean = true;
             long aLongMy = 1000L;
             float aFloat = 12.23f;
-            char aChar = 4567;
+            char aChar = '\u2242';
             return aInt;
-            //❓здесь какая то хрень в char aChar = ‘\u2242’;
+            //✅ здесь какая то хрень в char aChar = ‘\u2242’;
             //2. Создать переменные всех пройденных типов данных, и инициализировать их значения;
         }
 
-        static int findExpNumber() {
+        static float findExpNumber() {
         //3. Написать метод вычисляющий выражение a * (b + (c / d)) и возвращающий результат,где a, b, c, d – входные параметры этого метода;
-            int a = 4;
-            int b = 6;
-            int c = 8;
-            int d = 7;
-            int abcd;
-            //❓почему тот же метод не работает, если я int меняю на float
-            return abcd = a * (b + (c / d));
+            float a = 4;
+            float b = 6;
+            float c = 8;
+            float d = 7;
+            //✅❓почему тот же метод не работает, если я int меняю на float
+            return a * (b + (c / d));
         }
 
-        static boolean sumIntoLimit() {
+        static boolean sumIntoLimit(int a1, int a2) {
         //4. Написать метод, принимающий на вход два числа, и проверяющий что их сумма лежит в пределах от 10 до 20(включительно),
         //   если да – вернуть true, в противном случае – false;
-            int a1 = 5;
-            int a2 = 4;
+
             int sumIL = a1 + a2;
             boolean sumILLog;
             if (sumIL > 20) {
@@ -66,22 +58,20 @@
             return sumILLog;
         }
 
-        static boolean intPositiveOrNegative() {
+        static void printPositiveOrNegative(int a3) {
             //5. Написать метод, которому в качестве параметра передается целое число, метод должен напечатать в консоль положительное ли
             //   число передали, или отрицательное; Замечание: ноль считаем положительным числом.
-            int a3 = 8;
-            boolean ipon;
             if (a3 >=0) {
-                ipon = true;
+                System.out.println("Число " + a3 + " положительное");
             }
             else {
-                ipon = false;
+                System.out.println("Число " + a3 + " отрицательное");
             }
-            return ipon;
+
         }
 
     }
-//}
+
 
 
 
