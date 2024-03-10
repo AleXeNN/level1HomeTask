@@ -1,4 +1,6 @@
-    public class Level1HomeTask1 {
+package Level_1_HT1;
+
+public class Level1HomeTask1 {
         public static void main(String[] args) {
             System.out.println("Привет проверяющий!");
 
@@ -98,6 +100,9 @@
 
 
     }
+
+
+
 
 
 
