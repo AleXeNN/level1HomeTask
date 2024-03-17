@@ -15,5 +15,13 @@ public class Array03 {
             }
 
         }
+        printMass(a);
+    }
+
+    public static void printMass(int[] mass) {
+        for (int i = 0; i < mass.length; i++) {
+            System.out.print(mass[i] + " ");
+        }
+        System.out.println();
     }
 }

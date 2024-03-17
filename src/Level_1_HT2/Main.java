@@ -1,6 +1,44 @@
 package Level_1_HT2;
 
 public class Main {
+    public static void main(String[] args) {
+
+        int[][] massQuadr = new int[10][10];
+        System.out.println("Квадратный массив к задаче 4");
+        for (int i = 0; i < massQuadr.length; i++) {
+            for (int j = 0; j < massQuadr[i].length; j++) {
+                if ((i == j) || (i == massQuadr.length - 1 - j)) {
+                    massQuadr[i][j] = 1;
+                }
+            }
+
+            printMass(massQuadr[i]);
+        }
+        System.out.println();
+
+//        int [][] m = new int[5][4];
+//
+//        for (int i = 0; i < m.length; i ++) {
+//            for (int j = 0; j < m[i].length; j++) {
+//                if (j == i - 1) {
+//                    m[i][j] = 1;
+//                }
+//                else {
+//                    m[i][j] = 0;
+//                }
+//
+//            }
+//        }
+//
+
+    }
+
+    public static void printMass(int[] mass) {
+        for (int i = 0; i < mass.length; i++) {
+            System.out.print(mass[i] + " ");
+        }
+        System.out.println();
+    }
 }
 
 
